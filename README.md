@@ -6,8 +6,8 @@ search queries, SEO improvements, top services, and target audience.
 
 | | |
 | --- | --- |
-| **Live demo** | https://dxora-link-analysis.onrender.com _(fill in after deploy)_ |
-| **API docs** | https://dxora-link-analysis.onrender.com/docs _(fill in after deploy)_ |
+| **Live demo** | https://dxora-link-analysis-s9a7.onrender.com |
+| **API docs** | https://dxora-link-analysis-s9a7.onrender.com/docs |
 | **Stack** | Python 3.12+, FastAPI, Pydantic v2, HTTPX, BeautifulSoup, Google Gemini |
 | **Assignment** | Dxora Technologies — Python Practical Test (Link Analysis) |
 
@@ -360,7 +360,6 @@ Notes:
 - Gemini free-tier RPM/RPD limits are no longer published publicly (they are shown per key in
   Google AI Studio) — if the demo throttles under review traffic, attach a billing account;
   at ~$0.004/request that costs cents.
-- After deploying, replace the two placeholder URLs at the top of this README.
 
 ## Project structure
 
@@ -396,22 +395,6 @@ tests/
 - [ ] `README.md` includes setup, sample request/response, LLM comparison and recommendation
 - [ ] No keys or credentials committed (`.env` is git-ignored)
 - [ ] Live demo URL + `/docs` reachable
-- [ ] Follow [Dxora Technologies on LinkedIn](https://www.linkedin.com/company/dxora-technologies)
-- [ ] Follow [CREST on Instagram](https://www.instagram.com/crestspot/)
-- [ ] Email to **hr@chivoxai.com**, subject: `<Your Name> - Python Practical Link Analysis test review`
-
-Email body:
-
-```
-1. Full Name:        ...
-2. Demo Link:        https://<service>.onrender.com
-3. GitHub Repo Link: https://github.com/<user>/<repo>
-4. Contact Number:   ...
-5. Current Location: ...
-6. Preferred Date and Time for Final Discussion: ...
-7. LinkedIn profile: ...
-8. Instagram profile: ...
-```
 
 ## Limitations
 
