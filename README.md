@@ -382,12 +382,31 @@ tests/
 
 ## Evidence
 
-> Add screenshots/logs here before submitting. Suggested captures:
->
-> 1. `pytest -q` output (all tests passing)
-> 2. `uvicorn` startup + a `curl` request against a real site, showing the
->    `Analysis completed for <url> in X.Xs` log line and the JSON response
-> 3. The deployed `/docs` page on Render
+All captures come from the deployed service at
+<https://dxora-link-analysis-s9a7.onrender.com> (the root redirects to `/docs`).
+
+**Deployed API documentation**
+
+![Deployed Swagger UI](evidence/deployed-docs.png)
+
+**Live analysis request** — `POST /link-analysis` with
+`{"url": "https://www.python.org"}` executed from the deployed Swagger UI:
+`200 OK` with all five sections.
+
+![Live analysis request and response](evidence/live-analysis.png)
+
+![Live analysis response body](evidence/live-analysis-response.png)
+
+**Offline test suite** — 35 tests, no network or API key required:
+
+```
+$ pytest -q
+...................................                                      [100%]
+35 passed, 1 warning in 0.29s
+```
+
+The captured response body is saved at
+[`evidence/live-response.json`](evidence/live-response.json).
 
 ## Submission checklist (per the brief)
 
