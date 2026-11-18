@@ -205,6 +205,12 @@ def test_competitor_normalisation_dedupes_and_adds_disclaimer():
     assert result.competitor_analysis.disclaimer
 
 
+def test_root_redirects_to_docs(client):
+    response = client.get("/", follow_redirects=False)
+    assert response.status_code == 307
+    assert response.headers["location"] == "/docs"
+
+
 def test_missing_url_returns_structured_422(client):
     response = client.post("/link-analysis", json={})
     assert response.status_code == 422

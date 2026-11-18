@@ -9,7 +9,7 @@ import anyio
 import httpx
 from fastapi import FastAPI, Request
 from fastapi.exceptions import RequestValidationError
-from fastapi.responses import JSONResponse
+from fastapi.responses import JSONResponse, RedirectResponse
 from starlette.types import ASGIApp, Receive, Scope, Send
 
 from .config import get_settings
@@ -120,6 +120,11 @@ app = FastAPI(
 )
 
 app.add_middleware(RequestBodyLimitMiddleware, max_bytes=MAX_REQUEST_BYTES)
+
+
+@app.get("/", include_in_schema=False)
+async def root() -> RedirectResponse:
+    return RedirectResponse(url="/docs")
 
 
 def _error(status_code: int, code: str, message: str) -> JSONResponse:
