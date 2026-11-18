@@ -410,10 +410,10 @@ The captured response body is saved at
 
 ## Submission checklist (per the brief)
 
-- [ ] Public GitHub repository with this source
-- [ ] `README.md` includes setup, sample request/response, LLM comparison and recommendation
-- [ ] No keys or credentials committed (`.env` is git-ignored)
-- [ ] Live demo URL + `/docs` reachable
+- [x] Public GitHub repository with this source
+- [x] `README.md` includes setup, sample request/response, LLM comparison and recommendation
+- [x] No keys or credentials committed (`.env` is git-ignored)
+- [x] Live demo URL + `/docs` reachable
 
 ## Limitations
 
